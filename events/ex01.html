@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        DOM Manipulation
+    </title>
+</head>
+
+<body>
+    <input type="text" id="t1">
+    <input type="text" id="t2">
+
+    <button onclick="doSum()"> + </button>
+    <button onclick="abSquare()"> (a+b)^2 </button>
+    <button onclick="eraseData()">Clear</button>
+
+    <input type="text" id="t3">
+    <!--DOM (html+css) Manipulation-->
+    <script>
+      function doSum(){
+          //Getting value from t1
+       let x= document.getElementById('t1').value
+       //Getting value from t2
+       let y= document.getElementById('t2').value
+       let sum =eval(x) + eval(y)
+       //Setting value to t3
+       document.getElementById('t3').value = sum
+      }
+      function abSquare(){
+        let a= eval(document.getElementById('t1').value)
+        let b= eval(document.getElementById('t2').value)
+        let result = (a*a)+(b*b)+(2*(a*b))
+        document.getElementById('t3').value = result
+      }
+      function eraseData(){
+        document.getElementById('t1').value = ""
+        document.getElementById('t2').value = ""
+        document.getElementById('t3').value = ""
+      }
+    </script>
+</body>
+
+</html>

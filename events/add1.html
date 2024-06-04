@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- (Preparing JS code inside teh Html code)-->
+    <title>
+        Addition application using Internal JS
+    </title>
+</head>
+<body>
+    <input type="text" id="t1">
+    <input type="text" id="t2">
+    <button onclick="doSum()"> + </button>
+    <!--Todo: add 4 more buttons for the sub,mul,div and mod-->
+    <button onclick="eraseData()">Clear</button>
+    <input type="text" id="t3">
+    <script>
+      function doSum(){
+          //Getting value from t1
+       let x= document.getElementById('t1').value
+       //Getting value from t2
+       let y= document.getElementById('t2').value
+       let sum =eval(x) + eval(y)
+       //Setting value to t3
+       document.getElementById('t3').value = sum
+      }
+      //Todo: add 4 more functions for the sub,mul,div and mod operations
+      function eraseData(){
+        document.getElementById('t1').value = ""
+        document.getElementById('t2').value = ""
+        document.getElementById('t3').value = ""
+      }
+    </script>
+</body>
+</html>
